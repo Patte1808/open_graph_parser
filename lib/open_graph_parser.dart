@@ -9,7 +9,7 @@ class OpenGraphParser {
   ///
   /// @param url The URL where the OG-data should be extracted from
   /// @returns A map containing the OG-data.
-  static Future<Map> getOpenGraphData(String url) async {
+  static Future<Map<String, dynamic>> getOpenGraphData(String url) async {
     var response = await http.get(url);
     
     return getOpenGraphDataFromResponse(response);
@@ -17,7 +17,7 @@ class OpenGraphParser {
 
   static Map<String, dynamic> getOpenGraphDataFromResponse(http.Response response) {
     var requiredAttributes = ['title', 'image'];
-    var data = {};
+    Map<String, dynamic> data = new Map<String, dynamic>();
 
     if (response.statusCode == 200) {
       var document = parser.parse(utf8.decode(response.bodyBytes));

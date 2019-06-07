@@ -2,9 +2,9 @@ name: open_graph_parser
 author: "Patrick Voß <patrick.voss1808@gmail.com>"
 homepage: https://github.com/Patte1808/open_graph_parser
 description: An open graph parser for Dart.
-version: 0.0.6
+version: 0.0.7
 environment:
     sdk: ">=2.1.0 <3.0.0"
 dependencies:
-  http: ">=0.11.3+17 <= 0.12.0"
-  html: ^0.13.3+3
+  http: ">=0.11.3+17 <= 0.12.0+2"
+  html: ">=0.13.3+3 <= 0.14.0+2"
